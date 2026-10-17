@@ -1,5 +1,10 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Question or help
+    url: https://github.com/Isonimus/esp32-dragon-radar/discussions/categories/q-a
+    about: >-
+      Wiring, GPS fixes, flashing and other how-to questions go to Discussions, where the
+      answers stay findable for the next person. Show your build there too.
   - name: Security vulnerability
     url: https://github.com/Isonimus/esp32-dragon-radar/security/advisories/new
     about: >-
