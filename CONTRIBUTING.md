@@ -45,6 +45,43 @@ work, but they apply to everyone. In short:
 - Fill in the pull request template, and run the native tests and the builds your change
   touches before you push.
 
+## Finding something to work on
+
+Issues labelled
+[`good first issue`](https://github.com/Isonimus/esp32-dragon-radar/labels/good%20first%20issue)
+are small and a good way into the code;
+[`help wanted`](https://github.com/Isonimus/esp32-dragon-radar/labels/help%20wanted) ones
+are bigger. Comment on an issue before you start, so two people don't build the same thing.
+
+## Adding a board
+
+The game reaches the hardware only through the interfaces in `src/hal/`, so a new board is
+a new folder, an environment and a few CI entries. The custom board
+(`src/hal/boards/custom/`) is the smallest example to copy.
+
+1. **Implement the interfaces** in `src/hal/boards/<board>/`: `DisplayHAL`, `InputHAL`,
+   `AudioHAL`, `GpsHAL`, `ImuHAL` and `PowerHAL`. A part the board lacks gets a stub, like
+   the custom board's silent `CustomAudio` and battery-less `CustomPower`. Storage is shared:
+   list `NvsStorage` as the others do.
+2. **Bundle them** in `<board>_hal.cpp`, which defines `getHAL()`; copy `custom_hal.cpp`.
+3. **Display:** configure the panel with LovyanGFX, and return `true` from `isRound()` for a
+   round panel. Every screen then lays itself out inside the circle on its own.
+4. **Input:** map the board's buttons, keys or encoder to `InputAction`. A board with one
+   button can reuse `SingleButtonGesture` (tap, double tap, long press), as the custom
+   board does.
+5. **Environment:** add `[env:<board>]` to `platformio.ini` with a `-DBOARD_<NAME>` flag
+   and a `build_src_filter` that keeps only your board's folder, like the existing envs.
+   Board `#ifdef`s and pin numbers stay inside your folder.
+6. **CI and releases:** add the env to the matrix in `.github/workflows/ci.yml` and in
+   `.github/workflows/release.yml`, and to the build step in
+   `.github/workflows/codeql.yml`. The release packaging reads the chip and the offsets
+   from PlatformIO, so it needs no change.
+7. **README:** the board under "Supported Devices", its GPS, its column in the pin map, and
+   its row in "Installing a release".
+8. **Show it working:** `scripts/capture_screen.py` captures the screen over USB; attach
+   the menu and radar captures to the pull request. Pure logic you add, such as key decoding,
+   gets a native test in `test/`.
+
 ## A note on `adr/` and `slices/`
 
 Those directories are the project's decision records: architecture decisions (ADRs) and
