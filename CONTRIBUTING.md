@@ -55,5 +55,6 @@ link the issue it addresses; the maintainer records any decision it implies.
 
 ## Reporting bugs and requesting features
 
-Use the issue templates. For anything security-sensitive, follow
-[SECURITY.md](SECURITY.md) instead of opening a public issue.
+Use the issue templates. Questions, help with a build and photos of yours go to
+[Discussions](https://github.com/Isonimus/esp32-dragon-radar/discussions). For anything
+security-sensitive, follow [SECURITY.md](SECURITY.md) instead of opening a public issue.
