@@ -34,8 +34,8 @@ open that corpus, so it skips qualified references (stele:ADR-0009).
 - [audit] The custom board (ESP32-C3) had 31,904 bytes of free heap at its lowest in play once the radar's background was cached (slice 0013). Re-measure with the `[radar] min_free_heap` log whenever a change allocates at runtime; if the margin gets tight, store only the circle's pixels per row on the round panel, which saves about 25 KB (ADR-0012)
 - [deferred] Define a static allocation policy for core game systems (`main.cpp` still `new`s the canvas and renderer)
 - [deferred] A browser-based web flasher (ESP Web Tools on GitHub Pages) serving each board's factory image; release images already have the shape it needs (ADR-0008)
-- [audit] After the first push to GitHub, confirm the `docs`, `CI` and `CodeQL` workflows run and are green (ADR-0009)
-- [audit] After pushing `v0.1.0`, confirm the release holds both images for all three boards and `SHA256SUMS.txt`, and flash one factory image per board at `0x0` (ADR-0010)
+- [audit] Flash the `v0.1.0` factory image at `0x0` on the Cardputer ADV and the custom board and check the title shows `v0.1.0`; the StickC's booted and showed it on 2026-10-17 (ADR-0010)
+- [audit] After flashing the StickC's `v0.1.0` factory image on 2026-10-17 the menu offered only New Game, so the image looks to overwrite NVS and erase the saved game and settings. Confirm it with a known save; if so, say it in the README's "Installing a release" and give the `-app.bin` offset for an upgrade that keeps them (ADR-0008)
 - [feature] A round carrier PCB for the custom board to replace the breadboard; concept in `docs/hardware/radar-pcb-concept.svg`. Before a KiCad layout, decide where the GPS antenna goes (a patch on the back faces the ground), whether to add a LiPo and charger, and the board size (70 mm fits the current modules)
 
 ## Resolved

@@ -61,8 +61,8 @@ Captured over serial from a Cardputer ADV, and the radar from an M5StickC Plus2 
 </p>
 
 <p align="center">
-  <img src="docs/images/radar.png" alt="The radar screen on the M5StickC Plus2 with a live GPS fix: a lit green screen with a curved grid in a grey bezel, the player's red triangle, outlined in dark green, on a short bright cross at the centre, seven glowing blips around it, and the 5 km range" width="480"><br>
-  <em>The radar at the 5 km range, with all seven balls in reach, lit in the blink.</em>
+  <img src="docs/images/radar.png" alt="The radar screen on the M5StickC Plus2 with a live GPS fix: a lit green screen with a curved grid in a grey bezel, the player's red triangle, outlined in dark green, on a short bright cross at the centre, two glowing blips, a red marker on the rim pointing to a ball out of range, and the 1 km range" width="480"><br>
+  <em>The radar at the 1 km range, with two balls in reach, lit in the blink.</em>
 </p>
 
 ---
