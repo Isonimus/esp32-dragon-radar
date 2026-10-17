@@ -36,6 +36,11 @@ Every document is exactly one of four things.
 decision. `LEDGER.md` cites the ADR. **Never reach back into an ADR to close a ledger
 item.** Closing an item means deleting its line from the ledger.
 
+An item fit for outside contributors is **promoted** to a GitHub issue: the issue becomes
+its only home and its ledger line is deleted in the same change. Never keep one item in both
+(ADR-0016). Audits that need the maintainer's hardware, design deferrals and deep-state bugs
+stay in the ledger.
+
 Changing our minds means writing a **new** ADR that supersedes the old one, never editing
 it. The superseding note must say *why the old reasoning was wrong* — that record is the
 most valuable thing this workflow produces, and an in-place edit destroys it.
