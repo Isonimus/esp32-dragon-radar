@@ -1,0 +1,7 @@
+name: "CodeQL config"
+
+# `paths` and `paths-ignore` are inert for compiled languages: CodeQL analyses
+# everything compiled during the build, including the libraries `pio run` pulls into
+# .pio/libdeps. Scoping to our own sources is done after analysis instead, by the
+# "Filter vendored dependencies" step in codeql.yml. This file is kept as the pinned
+# config-file reference and as the place for a future query-suite choice.

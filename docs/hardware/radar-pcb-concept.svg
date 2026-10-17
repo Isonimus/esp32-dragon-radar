@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1400 900" width="1400" height="900">
+<rect width="1400" height="900" fill="#ffffff"/>
+<text x="40" y="44" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" font-weight="bold" fill="#1f2328" >Dragon Radar carrier PCB — concept</text>
+<text x="40" y="68" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="start" font-weight="normal" fill="#6e7781" >A round board that the existing modules solder onto, replacing the breadboard. Drawn to scale; module sizes approximate. Not a manufacturable design.</text>
+<text x="480" y="130" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#1f2328" >FRONT</text>
+<circle cx="480" cy="440" r="175" fill="#14301f" stroke="#0a1a10" stroke-width="3"/>
+<circle cx="480" cy="440" r="169" fill="none" stroke="#1d4a2e" stroke-width="6"/>
+<line x1="480" y1="334" x2="480" y2="322" stroke="#f0f0e8" stroke-width="2"/>
+<line x1="499.27494772102926" y1="330.6863394156449" x2="500.49048496469777" y2="323.7926851445594" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="517.9642359091492" y1="335.69411909276414" x2="520.3583769124289" y2="329.1162707472628" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="533" y1="348.2013071988495" x2="539" y2="337.8090023534362" stroke="#f0f0e8" stroke-width="2"/>
+<line x1="551.3494246752059" y1="354.96906681379346" x2="555.8489379430116" y2="349.6067557119606" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="565.0309331862065" y1="368.65057532479415" x2="570.3932442880393" y2="364.15106205698834" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="571.7986928011505" y1="387" x2="582.1909976465638" y2="381" stroke="#f0f0e8" stroke-width="2"/>
+<line x1="584.3058809072359" y1="402.03576409085076" x2="590.8837292527372" y2="399.6416230875711" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="589.3136605843551" y1="420.72505227897074" x2="596.2073148554406" y2="419.50951503530223" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="586" y1="440" x2="598" y2="440" stroke="#f0f0e8" stroke-width="2"/>
+<line x1="589.3136605843551" y1="459.27494772102926" x2="596.2073148554406" y2="460.49048496469777" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="584.3058809072359" y1="477.96423590914924" x2="590.8837292527372" y2="480.3583769124289" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="571.7986928011505" y1="493" x2="582.1909976465638" y2="499" stroke="#f0f0e8" stroke-width="2"/>
+<line x1="565.0309331862065" y1="511.34942467520585" x2="570.3932442880393" y2="515.8489379430116" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="551.3494246752059" y1="525.0309331862065" x2="555.8489379430116" y2="530.3932442880393" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="533" y1="531.7986928011505" x2="539" y2="542.1909976465638" stroke="#f0f0e8" stroke-width="2"/>
+<line x1="517.9642359091492" y1="544.3058809072359" x2="520.358376912429" y2="550.8837292527372" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="499.27494772102926" y1="549.3136605843551" x2="500.49048496469777" y2="556.2073148554406" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="480" y1="546" x2="480" y2="558" stroke="#f0f0e8" stroke-width="2"/>
+<line x1="460.72505227897074" y1="549.3136605843551" x2="459.50951503530223" y2="556.2073148554406" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="442.03576409085076" y1="544.3058809072359" x2="439.6416230875711" y2="550.8837292527372" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="427" y1="531.7986928011505" x2="421" y2="542.1909976465638" stroke="#f0f0e8" stroke-width="2"/>
+<line x1="408.65057532479415" y1="525.0309331862065" x2="404.1510620569884" y2="530.3932442880395" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="394.96906681379346" y1="511.3494246752059" x2="389.6067557119606" y2="515.8489379430116" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="388.2013071988495" y1="493.00000000000006" x2="377.80900235343626" y2="499.00000000000006" stroke="#f0f0e8" stroke-width="2"/>
+<line x1="375.6941190927642" y1="477.9642359091493" x2="369.11627074726283" y2="480.358376912429" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="370.6863394156449" y1="459.27494772102926" x2="363.7926851445594" y2="460.49048496469777" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="374" y1="440" x2="362" y2="440" stroke="#f0f0e8" stroke-width="2"/>
+<line x1="370.6863394156449" y1="420.7250522789708" x2="363.7926851445594" y2="419.5095150353023" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="375.69411909276414" y1="402.0357640908508" x2="369.1162707472628" y2="399.64162308757113" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="388.2013071988495" y1="387" x2="377.80900235343626" y2="381" stroke="#f0f0e8" stroke-width="2"/>
+<line x1="394.96906681379346" y1="368.65057532479415" x2="389.60675571196055" y2="364.1510620569884" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="408.6505753247941" y1="354.96906681379346" x2="404.15106205698834" y2="349.6067557119606" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="426.99999999999994" y1="348.2013071988496" x2="420.99999999999994" y2="337.80900235343626" stroke="#f0f0e8" stroke-width="2"/>
+<line x1="442.03576409085076" y1="335.69411909276414" x2="439.64162308757113" y2="329.1162707472628" stroke="#f0f0e8" stroke-width="1.2"/>
+<line x1="460.7250522789706" y1="330.6863394156449" x2="459.5095150353021" y2="323.79268514455947" stroke="#f0f0e8" stroke-width="1.2"/>
+<circle cx="480" cy="440" r="122" fill="none" stroke="#f0f0e8" stroke-width="1.2"/>
+<defs><path id="rimArc" d="M 329 440 A 151 151 0 0 0 631 440"/></defs>
+<text font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" letter-spacing="3" fill="#f0f0e8"><textPath href="#rimArc" xlink:href="#rimArc" startOffset="50%" text-anchor="middle">DRAGON RADAR</textPath></text>
+<circle cx="480" cy="440" r="97.5" fill="#c8c8c8" stroke="#9a9a9a" stroke-width="2"/>
+<circle cx="480" cy="440" r="89" fill="#111"/>
+<circle cx="480" cy="440" r="81" fill="#061a0c"/>
+<circle cx="480" cy="440" r="27" fill="none" stroke="#2fbf5a" stroke-width="1" opacity="0.6"/>
+<circle cx="480" cy="440" r="54" fill="none" stroke="#2fbf5a" stroke-width="1" opacity="0.6"/>
+<line x1="400" y1="427.3114224595505" x2="400" y2="452.6885775404495" stroke="#2fbf5a" stroke-width="0.8" opacity="0.35"/>
+<line x1="467.3114224595505" y1="360" x2="492.6885775404495" y2="360" stroke="#2fbf5a" stroke-width="0.8" opacity="0.35"/>
+<line x1="427" y1="378.74642867554576" x2="427" y2="501.25357132445424" stroke="#2fbf5a" stroke-width="0.8" opacity="0.35"/>
+<line x1="418.74642867554576" y1="387" x2="541.2535713244542" y2="387" stroke="#2fbf5a" stroke-width="0.8" opacity="0.35"/>
+<line x1="454" y1="363.2862463439573" x2="454" y2="516.7137536560426" stroke="#2fbf5a" stroke-width="0.8" opacity="0.35"/>
+<line x1="403.2862463439573" y1="414" x2="556.7137536560426" y2="414" stroke="#2fbf5a" stroke-width="0.8" opacity="0.35"/>
+<line x1="481" y1="359.0061730747337" x2="481" y2="520.9938269252664" stroke="#2fbf5a" stroke-width="0.8" opacity="0.35"/>
+<line x1="399.0061730747337" y1="441" x2="560.9938269252664" y2="441" stroke="#2fbf5a" stroke-width="0.8" opacity="0.35"/>
+<line x1="508" y1="363.99342133736053" x2="508" y2="516.0065786626394" stroke="#2fbf5a" stroke-width="0.8" opacity="0.35"/>
+<line x1="403.99342133736053" y1="468" x2="556.0065786626394" y2="468" stroke="#2fbf5a" stroke-width="0.8" opacity="0.35"/>
+<line x1="535" y1="380.53572501072597" x2="535" y2="499.46427498927403" stroke="#2fbf5a" stroke-width="0.8" opacity="0.35"/>
+<line x1="420.53572501072597" y1="495" x2="539.464274989274" y2="495" stroke="#2fbf5a" stroke-width="0.8" opacity="0.35"/>
+<path d="M 480 440 L 480 359 A 81 81 0 0 1 525.7360403449978 373.14781519231605 Z" fill="#2fbf5a" opacity="0.25"/>
+<polygon points="480,431 486.5,446.5 473.5,446.5" fill="#e53935"/>
+<circle cx="510" cy="395" r="5.5" fill="#ffb300"/>
+<circle cx="430" cy="460" r="5.5" fill="#ffb300"/>
+<circle cx="495" cy="495" r="5.5" fill="#ffb300"/>
+<rect x="465" y="274" width="30" height="22" rx="3" fill="#d9d9d9" stroke="#8c8c8c" stroke-width="1.5" />
+<circle cx="480" cy="285" r="7" fill="#3a3a3a"/>
+<circle cx="589.6015510839148" cy="549.6015510839148" r="11" fill="#d4a440" stroke="#9a7426" stroke-width="1"/>
+<circle cx="589.6015510839148" cy="549.6015510839148" r="5.5" fill="#ffffff"/>
+<circle cx="370.39844891608516" cy="549.6015510839148" r="11" fill="#d4a440" stroke="#9a7426" stroke-width="1"/>
+<circle cx="370.39844891608516" cy="549.6015510839148" r="5.5" fill="#ffffff"/>
+<circle cx="370.3984489160851" cy="330.39844891608516" r="11" fill="#d4a440" stroke="#9a7426" stroke-width="1"/>
+<circle cx="370.3984489160851" cy="330.39844891608516" r="5.5" fill="#ffffff"/>
+<circle cx="589.6015510839148" cy="330.3984489160851" r="11" fill="#d4a440" stroke="#9a7426" stroke-width="1"/>
+<circle cx="589.6015510839148" cy="330.3984489160851" r="5.5" fill="#ffffff"/>
+<polyline points="480,285 210,205" fill="none" stroke="#57606a" stroke-width="1.2"/>
+<circle cx="480" cy="285" r="3" fill="#57606a"/>
+<text x="204" y="209" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="bold" fill="#1f2328" >Crown button</text>
+<text x="204" y="225" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="end" font-weight="normal" fill="#6e7781" >6×6 mm tactile switch,</text>
+<text x="204" y="241" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="end" font-weight="normal" fill="#6e7781" >replaces the KY-040</text>
+<polyline points="415,400 210,340" fill="none" stroke="#57606a" stroke-width="1.2"/>
+<circle cx="415" cy="400" r="3" fill="#57606a"/>
+<text x="204" y="344" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="bold" fill="#1f2328" >GC9A01 1.28″ round TFT</text>
+<text x="204" y="360" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="end" font-weight="normal" fill="#6e7781" >module on headers, glass ≈ Ø36 mm</text>
+<polyline points="367.5,410 210,470" fill="none" stroke="#57606a" stroke-width="1.2"/>
+<circle cx="367.5" cy="410" r="3" fill="#57606a"/>
+<text x="204" y="474" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="bold" fill="#1f2328" >Dial ticks in silkscreen</text>
+<text x="204" y="490" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="end" font-weight="normal" fill="#6e7781" >every 10°, like the radar bezel</text>
+<polyline points="370.5,549.5 210,600" fill="none" stroke="#57606a" stroke-width="1.2"/>
+<circle cx="370.5" cy="549.5" r="3" fill="#57606a"/>
+<text x="204" y="604" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="bold" fill="#1f2328" >M2 mounting holes ×4</text>
+<text x="204" y="620" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="end" font-weight="normal" fill="#6e7781" >for the enclosure</text>
+<text x="920" y="130" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#1f2328" >BACK (seen from behind)</text>
+<circle cx="920" cy="440" r="175" fill="#14301f" stroke="#0a1a10" stroke-width="3"/>
+<circle cx="920" cy="440" r="169" fill="none" stroke="#1d4a2e" stroke-width="6"/>
+<circle cx="1029.601551083915" cy="549.6015510839148" r="11" fill="#d4a440" stroke="#9a7426" stroke-width="1"/>
+<circle cx="1029.601551083915" cy="549.6015510839148" r="5.5" fill="#ffffff"/>
+<circle cx="810.3984489160852" cy="549.6015510839148" r="11" fill="#d4a440" stroke="#9a7426" stroke-width="1"/>
+<circle cx="810.3984489160852" cy="549.6015510839148" r="5.5" fill="#ffffff"/>
+<circle cx="810.398448916085" cy="330.39844891608516" r="11" fill="#d4a440" stroke="#9a7426" stroke-width="1"/>
+<circle cx="810.398448916085" cy="330.39844891608516" r="5.5" fill="#ffffff"/>
+<circle cx="1029.6015510839147" cy="330.3984489160851" r="11" fill="#d4a440" stroke="#9a7426" stroke-width="1"/>
+<circle cx="1029.6015510839147" cy="330.3984489160851" r="5.5" fill="#ffffff"/>
+<rect x="830" y="300" width="180" height="125" rx="4" fill="#1f5fa8" stroke="#0e3a6b" stroke-width="1.5" />
+<rect x="862.5" y="305" width="115" height="115" rx="6" fill="#c9c3b4" stroke="#8a8478" stroke-width="1.5" opacity="0.95"/>
+<rect x="900" y="342.5" width="40" height="40" fill="#bfb7a3" stroke="#8a8478"/>
+<circle cx="927.5" cy="370" r="3.5" fill="#ccc"/>
+<circle cx="900.95" cy="417" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="900.95" cy="417" r="2" fill="#111"/>
+<circle cx="913.65" cy="417" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="913.65" cy="417" r="2" fill="#111"/>
+<circle cx="926.35" cy="417" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="926.35" cy="417" r="2" fill="#111"/>
+<circle cx="939.05" cy="417" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="939.05" cy="417" r="2" fill="#111"/>
+<rect x="775" y="437.5" width="75" height="97.5" rx="4" fill="#1d3f8f" stroke="#0f2559" stroke-width="1.5" />
+<rect x="802.5" y="480" width="20" height="20" fill="#111"/>
+<circle cx="782" cy="446" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="782" cy="446" r="2" fill="#111"/>
+<circle cx="782" cy="457" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="782" cy="457" r="2" fill="#111"/>
+<circle cx="782" cy="468" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="782" cy="468" r="2" fill="#111"/>
+<circle cx="782" cy="479" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="782" cy="479" r="2" fill="#111"/>
+<circle cx="782" cy="490" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="782" cy="490" r="2" fill="#111"/>
+<circle cx="782" cy="501" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="782" cy="501" r="2" fill="#111"/>
+<circle cx="782" cy="512" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="782" cy="512" r="2" fill="#111"/>
+<circle cx="782" cy="523" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="782" cy="523" r="2" fill="#111"/>
+<rect x="875" y="497.5" width="90" height="112.5" rx="4" fill="#2b2b2b" stroke="#000000" stroke-width="1.5" />
+<rect x="895" y="540" width="50" height="35" fill="#3d3d3d" stroke="#555"/>
+<rect x="897.5" y="592.5" width="45" height="18" rx="6" fill="#bfc5cc" stroke="#6e7781" stroke-width="1.5" />
+<circle cx="881.5" cy="513" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="881.5" cy="513" r="2" fill="#111"/>
+<circle cx="881.5" cy="525.7" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="881.5" cy="525.7" r="2" fill="#111"/>
+<circle cx="881.5" cy="538.4" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="881.5" cy="538.4" r="2" fill="#111"/>
+<circle cx="881.5" cy="551.1" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="881.5" cy="551.1" r="2" fill="#111"/>
+<circle cx="881.5" cy="563.8" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="881.5" cy="563.8" r="2" fill="#111"/>
+<circle cx="881.5" cy="576.5" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="881.5" cy="576.5" r="2" fill="#111"/>
+<circle cx="881.5" cy="589.2" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="881.5" cy="589.2" r="2" fill="#111"/>
+<circle cx="881.5" cy="601.9" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="881.5" cy="601.9" r="2" fill="#111"/>
+<circle cx="958.5" cy="513" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="958.5" cy="513" r="2" fill="#111"/>
+<circle cx="958.5" cy="525.7" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="958.5" cy="525.7" r="2" fill="#111"/>
+<circle cx="958.5" cy="538.4" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="958.5" cy="538.4" r="2" fill="#111"/>
+<circle cx="958.5" cy="551.1" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="958.5" cy="551.1" r="2" fill="#111"/>
+<circle cx="958.5" cy="563.8" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="958.5" cy="563.8" r="2" fill="#111"/>
+<circle cx="958.5" cy="576.5" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="958.5" cy="576.5" r="2" fill="#111"/>
+<circle cx="958.5" cy="589.2" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="958.5" cy="589.2" r="2" fill="#111"/>
+<circle cx="958.5" cy="601.9" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="958.5" cy="601.9" r="2" fill="#111"/>
+<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#d1242f" stroke-width="1.5"/></pattern></defs>
+<rect x="875" y="480" width="90" height="25" fill="url(#hatch)" stroke="#d1242f" stroke-dasharray="4 3"/>
+<circle cx="1025" cy="395.5" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="1025" cy="395.5" r="2" fill="#111"/>
+<circle cx="1025" cy="408.2" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="1025" cy="408.2" r="2" fill="#111"/>
+<circle cx="1025" cy="420.9" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="1025" cy="420.9" r="2" fill="#111"/>
+<circle cx="1025" cy="433.6" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="1025" cy="433.6" r="2" fill="#111"/>
+<circle cx="1025" cy="446.3" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="1025" cy="446.3" r="2" fill="#111"/>
+<circle cx="1025" cy="459" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="1025" cy="459" r="2" fill="#111"/>
+<circle cx="1025" cy="471.7" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="1025" cy="471.7" r="2" fill="#111"/>
+<circle cx="1025" cy="484.4" r="4.25" fill="#d4a440" stroke="#9a7426" stroke-width="0.8"/>
+<circle cx="1025" cy="484.4" r="2" fill="#111"/>
+<rect x="1018" y="388.5" width="14" height="103" rx="3" fill="none" stroke="#f0f0e8" stroke-width="1.2"/>
+<polyline points="958.5,538.5 985,510 1005,470 1025,452.5" fill="none" stroke="#2c6b42" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="958.5,551 990,520 1010,485 1025,465" fill="none" stroke="#2c6b42" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="958.5,564 995,530 1015,500 1025,478" fill="none" stroke="#2c6b42" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="881.5,551 855,530 855,485 795,460" fill="none" stroke="#2c6b42" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="881.5,564 847.5,535 847.5,490 792.5,472.5" fill="none" stroke="#2c6b42" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="913.65,417 913.65,450 865,470 865,515 881.5,525.5" fill="none" stroke="#2c6b42" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="926.35,417 926.35,450 975,470 975,570 958.5,589" fill="none" stroke="#2c6b42" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="980,320 1150,185" fill="none" stroke="#57606a" stroke-width="1.2"/>
+<circle cx="980" cy="320" r="3" fill="#57606a"/>
+<text x="1156" y="189" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="start" font-weight="bold" fill="#1f2328" >NEO-6M GPS + patch antenna</text>
+<text x="1156" y="205" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="start" font-weight="normal" fill="#6e7781" >GY-NEO6MV2, ≈36×25 mm</text>
+<polyline points="812.5,510 1150,320" fill="none" stroke="#57606a" stroke-width="1.2"/>
+<circle cx="812.5" cy="510" r="3" fill="#57606a"/>
+<text x="1156" y="324" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="start" font-weight="bold" fill="#1f2328" >GY-511 compass</text>
+<text x="1156" y="340" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="start" font-weight="normal" fill="#6e7781" >LSM303DLHC, ≈19.5×15 mm</text>
+<polyline points="1025,430 1150,430" fill="none" stroke="#57606a" stroke-width="1.2"/>
+<circle cx="1025" cy="430" r="3" fill="#57606a"/>
+<text x="1156" y="434" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="start" font-weight="bold" fill="#1f2328" >Display header</text>
+<text x="1156" y="450" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="start" font-weight="normal" fill="#6e7781" >GC9A01 pins through the board</text>
+<polyline points="945,485 1150,540" fill="none" stroke="#57606a" stroke-width="1.2"/>
+<circle cx="945" cy="485" r="3" fill="#57606a"/>
+<text x="1156" y="544" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="start" font-weight="bold" fill="#1f2328" >Antenna keep-out</text>
+<text x="1156" y="560" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="start" font-weight="normal" fill="#6e7781" >no copper under the ESP32 antenna</text>
+<polyline points="945,565 1150,650" fill="none" stroke="#57606a" stroke-width="1.2"/>
+<circle cx="945" cy="565" r="3" fill="#57606a"/>
+<text x="1156" y="654" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="start" font-weight="bold" fill="#1f2328" >ESP32-C3 Super Mini</text>
+<text x="1156" y="670" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="start" font-weight="normal" fill="#6e7781" >USB-C at the edge: power + flashing</text>
+<line x1="305" y1="655" x2="355" y2="655" stroke="#1f2328" stroke-width="2"/>
+<text x="330" y="647" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2328" >10 mm</text>
+<text x="655" y="659" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="bold" fill="#1f2328" >Ø70 mm board</text>
+<text x="40" y="760" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" font-weight="bold" fill="#1f2328" >Open decisions before a real layout</text>
+<text x="40" y="784" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781" >1. GPS antenna: a patch must face the sky with no ground plane above it. On the back it faces the ground when the radar is held face-up. Options: a bigger board with the patch on the front, an active antenna, or a ceramic chip antenna.</text>
+<text x="40" y="804" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781" >2. Power: the prototype runs only from USB. A LiPo cell and charger would not fit beside the modules; it would sit under the board in the enclosure.</text>
+<text x="40" y="824" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781" >3. Compass: keep it away from a battery, a speaker and high-current traces, or recalibrate with them in place.</text>
+</svg>

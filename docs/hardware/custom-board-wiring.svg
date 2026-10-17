@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1270 940" width="1270" height="940">
+<rect width="1270" height="940" fill="#ffffff"/>
+<text x="40" y="42" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" font-weight="bold" fill="#1f2328">Custom board — wiring</text>
+<text x="40" y="66" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="start" font-weight="normal" fill="#6e7781">ESP32-C3 Super Mini + GC9A01 round TFT + NEO-6M GPS + GY-511 compass + KY-040 push button. Pins as in src/hal/boards/custom/.</text>
+<rect x="500" y="300" width="170" height="400" rx="10" fill="#e8f1fb" stroke="#0b5cad" stroke-width="2"/>
+<text x="585" y="326" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#0b5cad">ESP32-C3</text>
+<text x="585" y="344" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="normal" fill="#0b5cad">Super Mini</text>
+<rect x="555" y="694" width="60" height="26" rx="5" fill="#d0d7de" stroke="#57606a" stroke-width="2"/>
+<text x="585" y="736" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#6e7781">USB-C · 5 V in</text>
+<line x1="500" y1="380" x2="480" y2="380" stroke="#afb8c1" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="508" y="384" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#afb8c1">GPIO0</text>
+<line x1="500" y1="420" x2="480" y2="420" stroke="#57606a" stroke-width="2"/>
+<text x="508" y="424" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">GPIO1</text>
+<line x1="500" y1="460" x2="480" y2="460" stroke="#57606a" stroke-width="2"/>
+<text x="508" y="464" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">GPIO2</text>
+<line x1="500" y1="500" x2="480" y2="500" stroke="#57606a" stroke-width="2"/>
+<text x="508" y="504" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">GPIO3</text>
+<line x1="500" y1="540" x2="480" y2="540" stroke="#57606a" stroke-width="2"/>
+<text x="508" y="544" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">GPIO4</text>
+<line x1="500" y1="580" x2="480" y2="580" stroke="#57606a" stroke-width="2"/>
+<text x="508" y="584" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">3V3</text>
+<line x1="500" y1="620" x2="480" y2="620" stroke="#57606a" stroke-width="2"/>
+<text x="508" y="624" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">GND</text>
+<line x1="500" y1="660" x2="480" y2="660" stroke="#afb8c1" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="508" y="664" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#afb8c1">5V</text>
+<line x1="670" y1="380" x2="690" y2="380" stroke="#afb8c1" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="662" y="384" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#afb8c1">GPIO21</text>
+<line x1="670" y1="420" x2="690" y2="420" stroke="#afb8c1" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="662" y="424" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#afb8c1">GPIO20</text>
+<line x1="670" y1="460" x2="690" y2="460" stroke="#57606a" stroke-width="2"/>
+<text x="662" y="464" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2328">GPIO10</text>
+<line x1="670" y1="500" x2="690" y2="500" stroke="#57606a" stroke-width="2"/>
+<text x="662" y="504" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2328">GPIO9</text>
+<line x1="670" y1="540" x2="690" y2="540" stroke="#57606a" stroke-width="2"/>
+<text x="662" y="544" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2328">GPIO8</text>
+<line x1="670" y1="580" x2="690" y2="580" stroke="#57606a" stroke-width="2"/>
+<text x="662" y="584" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2328">GPIO7</text>
+<line x1="670" y1="620" x2="690" y2="620" stroke="#57606a" stroke-width="2"/>
+<text x="662" y="624" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2328">GPIO6</text>
+<line x1="670" y1="660" x2="690" y2="660" stroke="#57606a" stroke-width="2"/>
+<text x="662" y="664" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2328">GPIO5</text>
+<line x1="480" y1="580" x2="462" y2="580" stroke="#d1242f" stroke-width="3"/>
+<circle cx="480" cy="580" r="3.5" fill="#d1242f"/>
+<line x1="462" y1="570" x2="462" y2="590" stroke="#d1242f" stroke-width="3"/>
+<text x="454" y="584" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="bold" fill="#d1242f">3V3</text>
+<line x1="480" y1="620" x2="464" y2="620" stroke="#1f2328" stroke-width="3"/>
+<circle cx="480" cy="620" r="3.5" fill="#1f2328"/>
+<line x1="464" y1="608" x2="464" y2="632" stroke="#1f2328" stroke-width="2.5"/>
+<line x1="459" y1="612" x2="459" y2="628" stroke="#1f2328" stroke-width="2.5"/>
+<line x1="454" y1="616" x2="454" y2="624" stroke="#1f2328" stroke-width="2.5"/>
+<rect x="230" y="100" width="780" height="90" rx="8" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+<text x="620" y="130" font-family="Helvetica, Arial, sans-serif" font-size="15" text-anchor="middle" font-weight="bold" fill="#1f2328">GC9A01 1.28″ round TFT (SPI, write-only)</text>
+<line x1="260" y1="190" x2="260" y2="210" stroke="#57606a" stroke-width="2"/>
+<text x="260" y="181" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2328">DC</text>
+<line x1="290" y1="190" x2="290" y2="210" stroke="#57606a" stroke-width="2"/>
+<text x="290" y="181" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2328">RES</text>
+<line x1="730" y1="190" x2="730" y2="210" stroke="#57606a" stroke-width="2"/>
+<text x="730" y="181" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2328">CS</text>
+<line x1="775" y1="190" x2="775" y2="210" stroke="#57606a" stroke-width="2"/>
+<text x="775" y="181" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2328">SDA</text>
+<line x1="820" y1="190" x2="820" y2="210" stroke="#57606a" stroke-width="2"/>
+<text x="820" y="181" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2328">SCL</text>
+<line x1="880" y1="190" x2="880" y2="210" stroke="#57606a" stroke-width="2"/>
+<text x="880" y="181" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2328">VCC</text>
+<line x1="925" y1="190" x2="925" y2="210" stroke="#57606a" stroke-width="2"/>
+<text x="925" y="181" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2328">BLK</text>
+<line x1="970" y1="190" x2="970" y2="210" stroke="#57606a" stroke-width="2"/>
+<text x="970" y="181" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2328">GND</text>
+<line x1="880" y1="210" x2="880" y2="228" stroke="#d1242f" stroke-width="3"/>
+<circle cx="880" cy="210" r="3.5" fill="#d1242f"/>
+<line x1="870" y1="228" x2="890" y2="228" stroke="#d1242f" stroke-width="3"/>
+<text x="880" y="246" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="bold" fill="#d1242f">3V3</text>
+<line x1="925" y1="210" x2="925" y2="228" stroke="#d1242f" stroke-width="3"/>
+<circle cx="925" cy="210" r="3.5" fill="#d1242f"/>
+<line x1="915" y1="228" x2="935" y2="228" stroke="#d1242f" stroke-width="3"/>
+<text x="925" y="246" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="bold" fill="#d1242f">3V3</text>
+<line x1="970" y1="210" x2="970" y2="226" stroke="#1f2328" stroke-width="3"/>
+<circle cx="970" cy="210" r="3.5" fill="#1f2328"/>
+<line x1="958" y1="226" x2="982" y2="226" stroke="#1f2328" stroke-width="2.5"/>
+<line x1="962" y1="231" x2="978" y2="231" stroke="#1f2328" stroke-width="2.5"/>
+<line x1="966" y1="236" x2="974" y2="236" stroke="#1f2328" stroke-width="2.5"/>
+<rect x="60" y="360" width="140" height="110" rx="8" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+<text x="72" y="384" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" font-weight="bold" fill="#1f2328">KY-040</text>
+<text x="72" y="400" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="start" font-weight="normal" fill="#6e7781">switch only</text>
+<line x1="200" y1="420" x2="220" y2="420" stroke="#57606a" stroke-width="2"/>
+<text x="192" y="424" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2328">SW</text>
+<line x1="200" y1="450" x2="220" y2="450" stroke="#afb8c1" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="192" y="454" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#afb8c1">CLK</text>
+<line x1="90" y1="470" x2="90" y2="490" stroke="#57606a" stroke-width="2"/>
+<text x="90" y="461" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2328">GND</text>
+<line x1="90" y1="490" x2="90" y2="506" stroke="#1f2328" stroke-width="3"/>
+<circle cx="90" cy="490" r="3.5" fill="#1f2328"/>
+<line x1="78" y1="506" x2="102" y2="506" stroke="#1f2328" stroke-width="2.5"/>
+<line x1="82" y1="511" x2="98" y2="511" stroke="#1f2328" stroke-width="2.5"/>
+<line x1="86" y1="516" x2="94" y2="516" stroke="#1f2328" stroke-width="2.5"/>
+<line x1="130" y1="470" x2="130" y2="490" stroke="#afb8c1" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="130" y="461" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#afb8c1">+</text>
+<line x1="170" y1="470" x2="170" y2="490" stroke="#afb8c1" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="170" y="461" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#afb8c1">DT</text>
+<rect x="330" y="810" width="260" height="80" rx="8" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+<text x="460" y="860" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2328">NEO-6M GPS (9600 baud)</text>
+<line x1="360" y1="810" x2="360" y2="790" stroke="#57606a" stroke-width="2"/>
+<text x="360" y="828" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2328">TX</text>
+<line x1="410" y1="810" x2="410" y2="790" stroke="#57606a" stroke-width="2"/>
+<text x="410" y="828" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#1f2328">RX</text>
+<line x1="590" y1="840" x2="610" y2="840" stroke="#57606a" stroke-width="2"/>
+<text x="582" y="844" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2328">VCC</text>
+<line x1="590" y1="870" x2="610" y2="870" stroke="#57606a" stroke-width="2"/>
+<text x="582" y="874" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2328">GND</text>
+<line x1="610" y1="840" x2="628" y2="840" stroke="#d1242f" stroke-width="3"/>
+<circle cx="610" cy="840" r="3.5" fill="#d1242f"/>
+<line x1="628" y1="830" x2="628" y2="850" stroke="#d1242f" stroke-width="3"/>
+<text x="636" y="844" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="bold" fill="#d1242f">3V3</text>
+<line x1="610" y1="870" x2="626" y2="870" stroke="#1f2328" stroke-width="3"/>
+<circle cx="610" cy="870" r="3.5" fill="#1f2328"/>
+<line x1="626" y1="858" x2="626" y2="882" stroke="#1f2328" stroke-width="2.5"/>
+<line x1="631" y1="862" x2="631" y2="878" stroke="#1f2328" stroke-width="2.5"/>
+<line x1="636" y1="866" x2="636" y2="874" stroke="#1f2328" stroke-width="2.5"/>
+<rect x="960" y="400" width="190" height="250" rx="8" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+<text x="1055" y="610" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold" fill="#1f2328">GY-511</text>
+<text x="1055" y="628" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#6e7781">LSM303DLHC · I2C 0x19 / 0x1E</text>
+<line x1="960" y1="500" x2="940" y2="500" stroke="#57606a" stroke-width="2"/>
+<text x="968" y="504" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">SCL</text>
+<line x1="960" y1="540" x2="940" y2="540" stroke="#57606a" stroke-width="2"/>
+<text x="968" y="544" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#1f2328">SDA</text>
+<line x1="1150" y1="430" x2="1170" y2="430" stroke="#57606a" stroke-width="2"/>
+<text x="1142" y="434" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2328">3V3</text>
+<line x1="1150" y1="465" x2="1170" y2="465" stroke="#57606a" stroke-width="2"/>
+<text x="1142" y="469" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#1f2328">GND</text>
+<line x1="1150" y1="500" x2="1170" y2="500" stroke="#afb8c1" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="1142" y="504" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#afb8c1">VIN</text>
+<line x1="1150" y1="525" x2="1170" y2="525" stroke="#afb8c1" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="1142" y="529" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#afb8c1">INT1</text>
+<line x1="1150" y1="550" x2="1170" y2="550" stroke="#afb8c1" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="1142" y="554" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#afb8c1">INT2</text>
+<line x1="1150" y1="575" x2="1170" y2="575" stroke="#afb8c1" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="1142" y="579" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#afb8c1">DRDY</text>
+<line x1="1170" y1="430" x2="1188" y2="430" stroke="#d1242f" stroke-width="3"/>
+<circle cx="1170" cy="430" r="3.5" fill="#d1242f"/>
+<line x1="1188" y1="420" x2="1188" y2="440" stroke="#d1242f" stroke-width="3"/>
+<text x="1196" y="434" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="bold" fill="#d1242f">3V3</text>
+<line x1="1170" y1="465" x2="1186" y2="465" stroke="#1f2328" stroke-width="3"/>
+<circle cx="1170" cy="465" r="3.5" fill="#1f2328"/>
+<line x1="1186" y1="453" x2="1186" y2="477" stroke="#1f2328" stroke-width="2.5"/>
+<line x1="1191" y1="457" x2="1191" y2="473" stroke="#1f2328" stroke-width="2.5"/>
+<line x1="1196" y1="461" x2="1196" y2="469" stroke="#1f2328" stroke-width="2.5"/>
+<path d="M260,210 L260,500 L480,500" fill="none" stroke="#1a7f37" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="260" cy="210" r="3.5" fill="#1a7f37"/>
+<circle cx="480" cy="500" r="3.5" fill="#1a7f37"/>
+<path d="M290,210 L290,460 L480,460" fill="none" stroke="#8c959f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="290" cy="210" r="3.5" fill="#8c959f"/>
+<circle cx="480" cy="460" r="3.5" fill="#8c959f"/>
+<path d="M220,420 L254,420 A6,6 0 0 1 266,420 L284,420 A6,6 0 0 1 296,420 L480,420" fill="none" stroke="#8250df" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="220" cy="420" r="3.5" fill="#8250df"/>
+<circle cx="480" cy="420" r="3.5" fill="#8250df"/>
+<path d="M360,790 L360,540 L480,540" fill="none" stroke="#1a7f37" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="360" cy="790" r="3.5" fill="#1a7f37"/>
+<circle cx="480" cy="540" r="3.5" fill="#1a7f37"/>
+<path d="M690,660 L710,660 L710,760 L410,760 L410,790" fill="none" stroke="#0969da" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="690" cy="660" r="3.5" fill="#0969da"/>
+<circle cx="410" cy="790" r="3.5" fill="#0969da"/>
+<path d="M730,210 L730,460 L690,460" fill="none" stroke="#e16f24" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="730" cy="210" r="3.5" fill="#e16f24"/>
+<circle cx="690" cy="460" r="3.5" fill="#e16f24"/>
+<path d="M775,210 L775,580 L690,580" fill="none" stroke="#0969da" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="775" cy="210" r="3.5" fill="#0969da"/>
+<circle cx="690" cy="580" r="3.5" fill="#0969da"/>
+<path d="M820,210 L820,620 L690,620" fill="none" stroke="#d4a72c" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="820" cy="210" r="3.5" fill="#d4a72c"/>
+<circle cx="690" cy="620" r="3.5" fill="#d4a72c"/>
+<path d="M940,500 L826,500 A6,6 0 0 0 814,500 L781,500 A6,6 0 0 0 769,500 L690,500" fill="none" stroke="#d4a72c" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="940" cy="500" r="3.5" fill="#d4a72c"/>
+<circle cx="690" cy="500" r="3.5" fill="#d4a72c"/>
+<path d="M940,540 L826,540 A6,6 0 0 0 814,540 L781,540 A6,6 0 0 0 769,540 L690,540" fill="none" stroke="#0969da" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="940" cy="540" r="3.5" fill="#0969da"/>
+<circle cx="690" cy="540" r="3.5" fill="#0969da"/>
+<text x="693" y="454" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="start" font-weight="bold" fill="#e16f24">CS</text>
+<text x="693" y="494" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="start" font-weight="bold" fill="#d4a72c">SCL</text>
+<text x="693" y="534" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="start" font-weight="bold" fill="#0969da">SDA</text>
+<text x="693" y="574" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="start" font-weight="bold" fill="#0969da">MOSI</text>
+<text x="693" y="614" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="start" font-weight="bold" fill="#d4a72c">SCLK</text>
+<text x="693" y="654" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="start" font-weight="bold" fill="#0969da">GPS RX</text>
+<text x="477" y="414" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="end" font-weight="bold" fill="#8250df">BUTTON</text>
+<text x="477" y="454" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="end" font-weight="bold" fill="#8c959f">RST</text>
+<text x="477" y="494" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="end" font-weight="bold" fill="#1a7f37">DC</text>
+<text x="477" y="534" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="end" font-weight="bold" fill="#1a7f37">GPS TX</text>
+<text x="40" y="660" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" font-weight="bold" fill="#1f2328">Notes</text>
+<text x="40" y="682" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781">Everything runs from the Super Mini's 3V3 pin</text>
+<text x="40" y="700" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781">(its regulator, fed by USB 5 V).</text>
+<text x="40" y="718" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781">Wire colours follow the breadboard build.</text>
+<text x="40" y="736" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781">Display pin order varies by vendor: match labels.</text>
+<text x="40" y="754" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781">BLK on 3V3: backlight always on.</text>
+<text x="40" y="772" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781">GPS VCC also accepts 5 V (onboard LDO).</text>
+<text x="40" y="790" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781">GPIO2, 8 and 9 are strapping pins and must be high</text>
+<text x="40" y="808" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781">at reset: wire nothing that pulls them low at boot.</text>
+<text x="40" y="826" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781">Button: INPUT_PULLUP, pressed = LOW.</text>
+<text x="40" y="844" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781">Free: GPIO0, and GPIO20/21 (UART0;</text>
+<text x="40" y="862" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781">the boot log prints on GPIO21).</text>
+<text x="40" y="880" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#6e7781">Grey, dashed pins are not connected.</text>
+</svg>

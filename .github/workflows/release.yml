@@ -1,0 +1,131 @@
+name: Release
+
+# Publish a GitHub Release with flashable images for every board when a version tag is
+# pushed. What ships, and why the offsets are read from the build rather than written
+# here, is ADR-0008; the pipeline is slices/0010.
+on:
+  push:
+    tags:
+      # vMAJOR.MINOR.PATCH only (ADR-0008). A broader v* would start three board builds
+      # for a tag the packaging script then refuses, and would let a tag name carry
+      # shell metacharacters into the jobs.
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  # A tag is not proof the commit passed CI, so the native tests run again here and
+  # gate the build.
+  test:
+    name: native tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          # pioarduino rejects Python > 3.13 (mirrors ci.yml).
+          python-version: '3.13'
+
+      - name: Cache PlatformIO
+        uses: actions/cache@v6
+        with:
+          path: |
+            ~/.platformio
+            ~/.cache/pip
+          key: pio-${{ runner.os }}-native-${{ hashFiles('platformio.ini') }}
+          restore-keys: |
+            pio-${{ runner.os }}-native-
+
+      - name: Install PlatformIO
+        run: pip install --upgrade platformio
+
+      - name: pio test -e native
+        run: pio test -e native
+
+  build:
+    name: ${{ matrix.env }}
+    needs: test
+    runs-on: ubuntu-latest
+    # Job-wide, not on the build step alone: packaging calls `pio project metadata`, and
+    # PlatformIO wipes an env's build directory when it sees different build flags from
+    # the ones it built with, which would delete the firmware before it is packaged.
+    env:
+      # The YAML keeps the backslashes, so pio receives -DFIRMWARE_VERSION=\"vX.Y.Z\".
+      # This exact string was built and packaged in the local dry run (slices/0010).
+      PLATFORMIO_BUILD_FLAGS: -DFIRMWARE_VERSION=\"${{ github.ref_name }}\"
+      # Steps read the tag from the environment, never through ${{ }} inside a script.
+      VERSION: ${{ github.ref_name }}
+    strategy:
+      # One board failing must stop the release, not publish the other two.
+      fail-fast: true
+      matrix:
+        env: [custom, cardputer, m5stickc-plus2]
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          # pioarduino rejects Python > 3.13 (mirrors ci.yml).
+          python-version: '3.13'
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      # Same key as ci.yml's leg for this board, so a release reuses CI's warm cache.
+      - name: Cache PlatformIO
+        uses: actions/cache@v6
+        with:
+          path: |
+            ~/.platformio
+            ~/.cache/pip
+          key: pio-${{ runner.os }}-${{ matrix.env }}-${{ hashFiles('platformio.ini') }}
+          restore-keys: |
+            pio-${{ runner.os }}-${{ matrix.env }}-
+
+      # esptool is pinned so the merge-bin command line stays the one packaging expects.
+      - name: Install PlatformIO and esptool
+        run: pip install --upgrade platformio esptool==5.2.0
+
+      - name: Build ${{ matrix.env }} as ${{ github.ref_name }}
+        run: pio run -e ${{ matrix.env }}
+
+      - name: Package the release images
+        run: node scripts/package-release.mjs "${{ matrix.env }}" "$VERSION" dist
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: firmware-${{ matrix.env }}
+          path: dist/*.bin
+          if-no-files-found: error
+
+  publish:
+    name: Publish release
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: firmware-*
+          path: dist
+          merge-multiple: true
+
+      - name: Checksums
+        run: |
+          set -euo pipefail
+          cd dist
+          sha256sum dragon-radar-*.bin > SHA256SUMS.txt
+          cat SHA256SUMS.txt
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          gh release create "$VERSION" \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "Dragon Radar $VERSION" \
+            --generate-notes \
+            dist/dragon-radar-*.bin dist/SHA256SUMS.txt

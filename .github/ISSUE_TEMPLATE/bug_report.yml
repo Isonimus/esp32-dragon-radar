@@ -1,0 +1,61 @@
+name: Bug report
+description: Report a defect in the firmware
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        For a security-sensitive issue, use SECURITY.md (private reporting) instead of
+        a public bug report.
+  - type: input
+    id: version
+    attributes:
+      label: Firmware version / commit
+      description: The version on the title screen, or the commit you built (`dev` builds show "dev").
+      placeholder: "v0.1.0, or a commit SHA"
+    validations:
+      required: true
+  - type: dropdown
+    id: board
+    attributes:
+      label: Board
+      options:
+        - M5Stack Cardputer ADV (ESP32-S3)
+        - M5StickC Plus 2 (ESP32)
+        - Custom board (ESP32-C3 + GC9A01)
+    validations:
+      required: true
+  - type: dropdown
+    id: gps
+    attributes:
+      label: GPS module
+      options:
+        - M5Stack GPS Unit on the Grove port
+        - Cardputer GPS/LoRa cap
+        - GY-NEO6MV2 / NEO-6M or clone (custom board)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: serial
+    attributes:
+      label: Serial log (optional)
+      description: "Output of `pio device monitor -b 115200` around the failure. Remove any coordinates you do not want public."
+      render: shell

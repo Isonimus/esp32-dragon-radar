@@ -1,0 +1,10 @@
+{
+  "name": "esp32-dragon-radar",
+  "private": true,
+  "description": "Task runner for the doc tooling and the test suites; the firmware itself builds with PlatformIO",
+  "scripts": {
+    "lint": "node scripts/lint-docs.mjs .",
+    "index": "node scripts/build-index.mjs .",
+    "test": "node --test 'scripts/*.test.mjs' && python3 -m unittest discover -s scripts && pio test -e native"
+  }
+}

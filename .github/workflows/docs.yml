@@ -1,0 +1,46 @@
+name: docs
+
+# CI backstop for the doc invariants (stele:ADR-0003). The pre-commit hook is per-clone
+# and skippable with --no-verify; this runs on every push and PR so a commit that dodged
+# the hook still gets caught. Zero dependencies, so there is nothing to install.
+# See slices/0009.
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # check-immutable compares two revisions, so the base must be in the clone
+          # (stele:ADR-0019). The default depth-1 checkout has no history to compare.
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: Doc invariants
+        run: node scripts/lint-docs.mjs .
+
+      - name: ADR index matches the corpus
+        run: node scripts/build-index.mjs --check .
+
+      - name: Immutable documents only grow
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          # A new branch reports an all-zero "before" and has no comparable base. Say so
+          # rather than passing quietly: a skipped check that looks green is the failure
+          # this exists to prevent (stele:ADR-0019).
+          if [ -n "$BASE" ] && git cat-file -e "$BASE^{commit}" 2>/dev/null; then
+            node scripts/check-immutable.mjs "$BASE" HEAD
+          else
+            echo "::notice::no comparable base ref ($BASE); immutability unchecked for this push"
+          fi

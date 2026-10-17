@@ -1,0 +1,88 @@
+name: CodeQL
+
+# Semantic security analysis of our C++ sources. Findings surface as Code Scanning
+# alerts in the Security tab. See slices/0009.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '27 4 * * 1'  # weekly, Monday 04:27 UTC
+
+concurrency:
+  group: codeql-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  analyze:
+    name: Analyze C/C++
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          # pioarduino rejects Python > 3.13 (mirrors ci.yml).
+          python-version: '3.13'
+
+      - name: Cache PlatformIO
+        uses: actions/cache@v6
+        with:
+          path: |
+            ~/.platformio
+            ~/.cache/pip
+          key: pio-${{ runner.os }}-codeql-${{ hashFiles('platformio.ini') }}
+          restore-keys: |
+            pio-${{ runner.os }}-codeql-
+
+      - name: Install PlatformIO
+        run: pip install --upgrade platformio
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v4
+        with:
+          languages: c-cpp
+          config-file: ./.github/codeql/codeql-config.yml
+
+      # CodeQL for C++ traces a real compilation, and autobuild cannot drive PlatformIO.
+      # Every board is built: each HAL folder compiles only in its own env, so building
+      # one board would leave the other two boards' code unanalysed.
+      - name: Build every board
+        run: |
+          pio run -e custom
+          pio run -e cardputer
+          pio run -e m5stickc-plus2
+
+      # Analyze without uploading: path filters are inert for compiled languages, so the
+      # vendored libraries compiled from .pio/libdeps were analysed too.
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v4
+        with:
+          category: "/language:c-cpp"
+          upload: false
+          output: sarif-results
+
+      # Drop every result under .pio/ (vendored libraries and the framework) or test/
+      # (host mocks): code we do not own and will not patch. A result with no location
+      # is kept rather than crashing the filter.
+      - name: Filter vendored dependencies from results
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          for f in sarif-results/*.sarif; do
+            jq '(.runs[].results) |= map(select(
+              ((.locations[0].physicalLocation.artifactLocation.uri)? // "") as $u
+              | ($u|startswith(".pio/")) or ($u|startswith("test/"))
+              | not))' "$f" > "$f.tmp"
+            mv "$f.tmp" "$f"
+          done
+
+      - name: Upload filtered results
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: sarif-results
+          category: "/language:c-cpp"

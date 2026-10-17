@@ -1,0 +1,133 @@
+name: CI
+
+# Build every board and run the native unit suite on each change, so a broken compile
+# or a failing test is caught before review. Invariant #2 in CLAUDE.md asks for exactly
+# this set before a shared change is called done. See slices/0009.
+on:
+  push:
+  pull_request:
+
+# Only the latest push to a given ref is worth building; cancel superseded runs.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: ${{ matrix.env }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - env: native
+            cmd: pio test -e native
+          - env: custom
+            cmd: pio run -e custom
+          - env: cardputer
+            cmd: pio run -e cardputer
+          - env: m5stickc-plus2
+            cmd: pio run -e m5stickc-plus2
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          # The pioarduino ESP32 platform requires Python 3.10-3.13; '3.x' resolves to
+          # 3.14 on current runners and the platform rejects it.
+          python-version: '3.13'
+
+      # The pioarduino platform and the toolchains are large downloads; cache them per
+      # leg, keyed on platformio.ini so the cache drops when the platform or libs change.
+      - name: Cache PlatformIO
+        uses: actions/cache@v6
+        with:
+          path: |
+            ~/.platformio
+            ~/.cache/pip
+          key: pio-${{ runner.os }}-${{ matrix.env }}-${{ hashFiles('platformio.ini') }}
+          restore-keys: |
+            pio-${{ runner.os }}-${{ matrix.env }}-
+
+      - name: Install PlatformIO
+        run: pip install --upgrade platformio
+
+      - name: ${{ matrix.cmd }}
+        # Tee to a log the size step parses. `shell: bash` is what turns on pipefail:
+        # GitHub's default shell is `bash -e` without it, so the step would take tee's
+        # exit status and a failing pio, a failing test included, would pass.
+        shell: bash
+        run: ${{ matrix.cmd }} 2>&1 | tee build.log
+
+      # RAM and flash per board in the run summary, so growth toward the 1.25 MB app
+      # partition on the custom board and the StickC is visible on every run.
+      - name: Build size
+        if: matrix.env != 'native'
+        shell: bash
+        run: |
+          if ! grep -qE '^Flash:' build.log; then
+            echo "::error::No 'Flash:' line in the build output; PlatformIO's size format may have changed, so this report is broken."
+            exit 1
+          fi
+          {
+            echo "### Build size: ${{ matrix.env }}"
+            echo ""
+            echo "| Memory | Used | Capacity | Usage | Headroom |"
+            echo "| --- | ---: | ---: | ---: | ---: |"
+            for metric in RAM Flash; do
+              line=$(grep -E "^${metric}:" build.log | tail -1 || true)
+              if [ -z "$line" ]; then
+                echo "::warning::No '${metric}:' line in the build output for ${{ matrix.env }}."
+                continue
+              fi
+              used=$(sed -E 's/.*used ([0-9]+) bytes from ([0-9]+) bytes.*/\1/' <<<"$line")
+              total=$(sed -E 's/.*used ([0-9]+) bytes from ([0-9]+) bytes.*/\2/' <<<"$line")
+              pct=$(sed -E 's/.*\][[:space:]]*([0-9.]+)%.*/\1/' <<<"$line")
+              printf '| %s | %d B (%d KB) | %d B (%d KB) | %s%% | %d B (%d KB) |\n' \
+                "$metric" "$used" "$((used / 1024))" "$total" "$((total / 1024))" \
+                "$pct" "$((total - used))" "$(((total - used) / 1024))"
+            done
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  # Tests for the host-side scripts: release packaging (slices/0010) and screen
+  # capture (slices/0011).
+  scripts:
+    name: host scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: Test the release tooling
+        run: node --test 'scripts/*.test.mjs'
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+
+      - name: Test the screen capture
+        run: |
+          pip install pillow pyserial
+          python -m unittest discover -s scripts
+
+  # A separate job rather than a matrix leg: it needs an apt install and different steps.
+  # It gates on cppcheck's default error severity (null deref, buffer overrun,
+  # use-after-free), the low-false-positive class, over our own src/. A false positive
+  # gets an in-source `cppcheck-suppress` comment, not a looser gate.
+  cppcheck:
+    name: cppcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install cppcheck
+        run: sudo apt-get update && sudo apt-get install -y cppcheck
+
+      - name: Run cppcheck
+        run: >
+          cppcheck --std=c++17 --language=c++ --error-exitcode=1
+          --inline-suppr --suppress=missingIncludeSystem
+          -I src src/
